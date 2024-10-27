@@ -8,7 +8,7 @@ main() {
     echo "Using stow to install dotfiles"
     if ! command -v stow &> /dev/null; then
         if command -v apt-get &> /dev/null; then
-            sudo apt-get install -y stow
+            sudo apt-get update && sudo apt-get install -y stow
         elif command -v brew &> /dev/null; then
             brew install stow
         elif command -v pkgx &> /dev/null; then
